@@ -2,13 +2,15 @@ import re
 
 # Definición de tokens
 TOKEN_SPECIFICATION = [
-    ('COMMENT', r'^comentario:.*'),
+    ('COMMENT', r'^comentario: .*'),
     ('NUMBER', r'^\d+$'),
     ('ASSIGN', r'\basignale\b'),
     ('TYPE', r'\btipo\b'),
+    ('TYPE_NUMBER', r'\bentero\b'),
+    ('TYPE_BOOLEAN', r'\blogico\b'),    
     ('PRINT', r'\bmuestra\b'),
     ('A', r'\ba\b'),
-    ('VAR', r'^[a-zA-Z_][a-zA-Z0-9_]*$'),
+    ('VAR', r'^[a-zA-Z_][a-zA-Z0-9_]*'),
     ('NEWLINE', r'\n'),
     ('SKIP', r'[ \t]+'),
     ('MISMATCH', r'.'),
@@ -16,33 +18,46 @@ TOKEN_SPECIFICATION = [
 
 TOKENS = {name: re.compile(pattern) for name, pattern in TOKEN_SPECIFICATION}
 
-# Función para encotrar el valor de un token
-def find_token(text):
-  for token, pattern in TOKENS.items():
-      match = pattern.match(text)
-      if match:
-          value = match.group()
-          if token == 'NUMBER':
-            return (token, int(value))
-          else:
-            return (token, value)
-  raise ValueError(f'Invalid token: {text}')
+class Lexer:
+  def __init__(self):
+    self.tokens = []
 
-print(find_token('variable'))
-print(find_token('cosa'))
-print(find_token('123'))
-print(find_token('1a'))
-print(find_token('a32'))
-print(find_token('comentario'))
-print(find_token('comentario: esto es un comentario'))
-print(find_token('tipo'))
-print(find_token('muestra'))
-print(find_token('asignale'))
-print(find_token('a'))
-print(find_token('aa'))
-print(find_token('a1'))
-print(find_token('\n'))
-print(find_token('   '))
-print(find_token('123a'))
-print(find_token('%'))
-print(find_token('@45'))
+  def lex(self, text):
+    self.tokens = []
+    lines = text.split('\n')
+    for line_num, line in enumerate(lines, start=1):
+      pos = 0
+      if not line.strip():
+        continue
+      while pos < len(line):
+        for token, pattern in TOKENS.items():
+          match = pattern.match(line[pos:])
+          if match:
+            value = match.group()
+            if token == 'COMMENT':
+              self.tokens.append((token, value[12:]))
+            else:
+              self.tokens.append((token, value))
+            pos += len(value)
+            break
+        else:
+          raise ValueError(f'Invalid token at line {line_num}, position {pos + 1}: {line[pos]}')
+      self.tokens.append(('NEWLINE', '\n'))
+    return self.tokens
+
+# Código de prueba
+code = """
+a mi_caja tipo entero asignale 42
+"""
+
+lexer = Lexer()
+tokens = lexer.lex(code)
+
+print("Código de ejemplo:")
+print("_"*40)
+print(code)
+print("_"*40)
+
+
+for token in tokens:
+    print(token)

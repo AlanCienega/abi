@@ -18,16 +18,16 @@ Hola mundo
 
 ## definicion de variables
 
-Imagina que tienes carton para hacer cajas, la base es la misma, pero le debes poner una tapa con agujeros en forma de numeros o letras, NO AMBAS.
+Imagina que tienes carton para hacer cajas, la base es la misma, pero le debes poner una tapa con agujeros en forma de enteros o letras, NO AMBAS.
 la tapa define el tipo de datos que le vas a poder meter a tu cajita
 
 ## Sintaxis
 
 ```
-a tu_contenedor tipo numero asignale 5
+a tu_contenedor asignale 5
 ```
 
-seria el equivalente a guardar un numero 5 dentro un elemento llamado "tu_contenedor" y ahora ese elemento vale 5
+seria el equivalente a guardar un número entero 5 dentro un elemento llamado "tu_contenedor" y ahora ese elemento vale 5
 
 ## comentarios
 
@@ -39,58 +39,69 @@ comentario: esto no lo va a interpretar el compilador, solo es para anotaciones
 
 ## declaracion de variables
 
-en este lenguaje tienes que definir tu variable con un valor inicial con la palabra "asignale" ademas tienes que definir el tipo, esto ayuda a que puedas acceder a operaciones validas para el tipo de dato
+en este lenguaje tienes que definir tu variable con un valor inicial con la palabra "asignale"
 
 ### números
 
 ```
-comentario: inicializar numeros
-a mi_edad tipo numero asignale 0
+comentario: inicializar enteros
+a mi_edad asignale 0
 ```
 
 ### Booleanos o valores logicos
 
 ```
 comentario: Inicializar booleanos
-a tres_monitores tipo logico asignale falso
+a tres_monitores asignale falso
 ```
 
 ## texto
 
 ```
-a la_puerta tipo texto asignale "negra"
+a la_puerta asignale "negra"
 ```
 
 ### arreglos
 
 ```
 comentario: define un arreglo
-a las_tortillas tipo arreglo asignale vacio
-comentario: en python equivale a; las_tortillas = []
-comentario: para agregar algun elemento al arreglo:
-a las_tortillas agregale "blancas"
-a las_tortillas agregale "azules"
-comentario: en python ya tendriamos esto en las_tortillas:
+a las_tortillas asignale vacio
 
-["blancas", "azules"]
+es como tener una caja con espacios para tortillas [   ] y este esta vacio en un inicio
+pero conforme le vas agegando se va llenando
+
+a las_tortillas agregale "azules"
+a las_tortillas agregale "verdes"
+
+ahora las_tortillas tendria ya este valor ["azules", "verdes"]
+
+
 ```
 
 ## actualizar variables
 
-para actualizar su valor ya no tienes que escribir el tipo pues se tomaria como nueva declaracion y daria error
+para actualizar el valor es igual como cuando las declaras, de esta forma el valor que tenia si ya la habias declarado, entonces se va a reemplazar el valor
 
 ```
 a mi_edad asignale 29
+a mi_edad asignale 19
+a mi_edad asignale 5
+
+muestra mi_edad
 ```
+
+en ese ejemplo la salida del codigo seria
+5
 
 ## condicionales
 
 ```
-a la_puerta tipo texto asignale "negra"
-a hay_cien_candados tipo logico asignale verdadero
+a la_puerta asignale "negra"
+a hay_cien_candados asignale verdadero
+a van_a_poder_a_mi_detenerme asignale verdaderi
 
 si la_puerta es "negra" y hay_cien_candados
-  muestra "van a poder a mi detenerme"
+  van_a_poder_a_mi_detenerme asignale falso
 
 ```
 
@@ -99,7 +110,6 @@ si la_puerta es "negra" y hay_cien_candados
 - agregale
 - quitale
 - a
-- en
 - y
 - o
 - si
@@ -107,10 +117,9 @@ si la_puerta es "negra" y hay_cien_candados
 - repite
 - recorre
 - veces
-- tipo
 - arreglo
 - cadena
-- numero
+- entero
 - logico
 - verdadero
 - falso
@@ -205,7 +214,7 @@ un bloque
 Este tipo de funciones tienen su nombre y las palabras que siguen serian valores que acepta para poder realizar una operacion
 
 ```
-a mi_edad tipo numero asignale 29
+a mi_edad asignale 29
 
 
 bloque: restaTres años
@@ -218,4 +227,4 @@ fin
 
 ## glosario
 
-- variables: Son como cajitas donde guardas cosas, en el lenguaje Abi solo numeros, letras, texto etc
+- variables: Son como cajitas donde guardas cosas, en el lenguaje Abi solo enteros, letras, texto etc

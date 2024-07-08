@@ -19,45 +19,38 @@ TOKEN_SPECIFICATION = [
 TOKENS = {name: re.compile(pattern) for name, pattern in TOKEN_SPECIFICATION}
 
 class Lexer:
-  def __init__(self):
+  def __init__(self, code):
+    self.code = code
     self.tokens = []
-
-  def lex(self, text):
-    self.tokens = []
-    lines = text.split('\n')
+    self.pos = 0
+    self.line = 1
+    
+  def tokenize(self):
+    lines = self.code.split('\n')
     for line_num, line in enumerate(lines, start=1):
       pos = 0
       if not line.strip():
         continue
       while pos < len(line):
-        for token, pattern in TOKENS.items():
+        for token_type, pattern in TOKENS.items():
           match = pattern.match(line[pos:])
           if match:
             value = match.group()
-            if token == 'COMMENT':
-              self.tokens.append((token, value[12:]))
+            if token_type == 'COMMENT':
+              self.tokens.append((token_type, value[12:]))
+            elif token_type == 'NEWLINE':
+              self.line += 1
+              self.tokens.append((token_type, value))
+            elif token_type == 'SKIP':
+              pos += len(value)
+              break
+            elif token_type == 'MISMATCH':
+              raise RuntimeError(f'{value} inesperado en la línea {line_num}')
             else:
-              self.tokens.append((token, value))
+              self.tokens.append((token_type, value))
             pos += len(value)
             break
         else:
-          raise ValueError(f'Invalid token at line {line_num}, position {pos + 1}: {line[pos]}')
+            raise ValueError(f'Carácter inesperado: {line[pos]} en la línea {line_num}')
       self.tokens.append(('NEWLINE', '\n'))
     return self.tokens
-
-# Código de prueba
-code = """
-a mi_caja tipo entero asignale 42
-"""
-
-lexer = Lexer()
-tokens = lexer.lex(code)
-
-print("Código de ejemplo:")
-print("_"*40)
-print(code)
-print("_"*40)
-
-
-for token in tokens:
-    print(token)

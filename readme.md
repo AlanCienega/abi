@@ -15,6 +15,54 @@ la salida de ejecutar el codigo.abi seria
 ```
 Hola mundo
 ```
+## ¿Por qué programar con Abi?
+
+La diferencia con otros lenguajes en español es que este no "traduce" las palabras reservadas tipicas de los lenguajes, sino que estas se integran directo en las frases para sonar de manera lógica tal que se pueda entender  lo que hace el lenguaje incluso sin tener que escribir, alguien simplemente te puede contar lo que esta leyendo y al final sabes donde y que valores toman las entidades que te estan contando 
+
+Es mucho mas facil entender y guardar en la memoria (humana)
+
+```
+a mi_edad asignale 20
+```
+que retener "mi_edad menor menos 20"
+```
+mi_edad <- 20
+```
+tambien podrias pensar en "mi_edad flecha izquierda 20"
+
+pero al final, te quedarias con que mi_edad vale 20 porque sabes que se le ha asignado ese valor, puesto que ya es una frase no tienes que aprender un lenguaje de programacion, sino que ya saabes un lenguaje, ESPAÑOL, ahora solo te faltaria saber programar pero en gran parte tambien ya lo sabes, le das valores a las cosas y tambien las modificas, entonces una vez que aprendas a hacer operaciones basicas con este lenguaje, estaras listo para dar el salto a cualquier otro lenguaje de programación
+
+### Comparación de ciclos
+Los loops (ciclos) en programación simplemente son repeticiones de algo n cantidad de veces
+
+
+<b>Ciclo en otro lenguaje en español</b>
+```
+Para i <- 1 Hasta 5 Hacer
+  Escribir "Hola Mundo"
+FinPara
+```
+
+<b>Ciclo en Abi</b>
+```
+repite:  muestra "hola Mundo" 5 veces
+```
+En el español los dos puntos ":" se usan como ejemplificacion del resto del contenido.
+
+Por eso mismo cuando en Abi te encuentras con los dos puntos tu cerebro ya va a saber que lo que sigue es una accion derivada de la palabra que antecede los dos puntos.
+
+Ejemplo: Esta misma linea es un ejemplo de ello.
+
+En Abi
+```
+comentario: Esto solo lo va a leer el desarrollador, la maquina lo va a ignorar
+
+repite: muestra "hola" 3 veces
+
+ejecuta: unBloqueDeCodigo
+
+```
+
 
 ## definicion de variables
 
@@ -57,6 +105,8 @@ a tres_monitores asignale falso
 
 ## texto
 
+Las cadenas de texto (strings), en la mayoria de lenguajes de programación se representan encerradas en comillas dobles, en el español se usan para  poner frases o citas, muy parecido pero ya que le das ese significado te va a hacer todo el sentido del mundo en los otros lenguajes.
+
 ```
 a la_puerta asignale "negra"
 ```
@@ -67,13 +117,13 @@ a la_puerta asignale "negra"
 comentario: define un arreglo
 a las_tortillas asignale vacio
 
-es como tener una caja con espacios para tortillas [   ] y este esta vacio en un inicio
-pero conforme le vas agegando se va llenando
+es como tener una caja con espacios para tortillas [   ] y este se encuentra vacio en un inicio
+pero conforme le vas agegando cosa se va llenando
 
 a las_tortillas agregale "azules"
 a las_tortillas agregale "verdes"
 
-ahora las_tortillas tendria ya este valor ["azules", "verdes"]
+ahora las_tortillas tendran este valor: ["azules", "verdes"]
 
 
 ```
@@ -98,7 +148,7 @@ en ese ejemplo la salida del codigo seria
 ```
 a la_puerta asignale "negra"
 a hay_cien_candados asignale verdadero
-a van_a_poder_a_mi_detenerme asignale verdaderi
+a van_a_poder_a_mi_detenerme asignale verdadero
 
 si la_puerta es "negra" y hay_cien_candados
   van_a_poder_a_mi_detenerme asignale falso
@@ -225,6 +275,14 @@ fin
 
 ```
 
+## resaltado de sintaxis abi
+copia la carpeta abi-lenguaje-de-programacion--facilito- a donde estan instaladas tus extensiones
+en linux algo asi:
+```
+└─$ cp -r abi-lenguaje-de-programacion--facilito- ~/.vscode/extensions
+
+```
+luego reinicia vscode
 ## glosario
 
 - variables: Son como cajitas donde guardas cosas, en el lenguaje Abi solo enteros, letras, texto etc

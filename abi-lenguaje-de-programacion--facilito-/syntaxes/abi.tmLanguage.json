@@ -28,11 +28,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.abi",
-					"match": "\\b(a|asignale|agregale|quitale)\\b"
+					"match": "\\b(a|asignale|agregale|quitale|veces)\\b"
 				},
 				{
 					"name": "keyword.function.abi",
-					"match": "\\b(fin|bloque|repite)\\b"
+					"match": "\\b(fin|bloque|repite|ejecuta)\\b"
 				}
 			]
 		},
@@ -60,7 +60,7 @@
 			"patterns": [
 				{
 					"name": "support.function",
-					"begin": "muestra|ejecuta:",
+					"begin": "muestra",
 					"end": " "
 				}
 			]

@@ -8,3 +8,14 @@ repite: a dinero quitale precio_de_dulces visitas_a_tienda veces
 repite: a dinero agregale premio_de_tragamonedas visitas_a_tienda veces
 
 muestra dinero
+a mi_edad asignale 20
+
+muestra mi_edad
+
+bloque: imprimeEdad
+  muestra "mi variable vale:"
+  muestra mi_edad
+fin
+
+ejecuta: imprimeEdad
+repite: muestra "hola" 20 veces

@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "generator-code": "^1.11.1",
+    "yo": "^5.0.0"
+  },
+  "scripts": {
+    "generate-code":"yo code"
+  }
+}

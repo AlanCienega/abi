@@ -1,3 +1,3 @@
-comentario: mi primer programa en abi
+comentario: mostrando ciclos en abi
 
-muestra "Hola Mundo"
+repite: muestra "Hola" 20 veces

@@ -3,9 +3,11 @@ import re
 # Definición de tokens
 TOKEN_SPECIFICATION = [
     ('COMMENT', r'^comentario: .*'),
-    ('NUMBER', r'^\d+$'),
-    ('STRING', r'^".*"$'),
+    ('NUMBER', r'^\d+'),
+    ('STRING', r'^".*"'),
     ('ASSIGN', r'\basignale\b'),
+    ('REPEAT', r'^repite:'),
+    ('TIMES', r'\bveces\b'),
     ('TYPE', r'\btipo\b'),
     ('TYPE_NUMBER', r'\bentero\b'),
     ('TYPE_BOOLEAN', r'\blogico\b'),    

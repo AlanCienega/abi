@@ -1,6 +1,7 @@
 import sys
 from lexer import Lexer
 from parser import Parser
+from interpreter import Interpreter
 
 def main(filename):
     with open(filename, 'r') as file:
@@ -9,12 +10,11 @@ def main(filename):
     lexer = Lexer(code)
     tokens = lexer.tokenize()
 
-    print("Tokens:", tokens)
-
     parser = Parser(tokens)
     ast = parser.parse()
 
-    print("AST:", ast)
+    interpreter = Interpreter(ast)
+    interpreter.interpret()
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:

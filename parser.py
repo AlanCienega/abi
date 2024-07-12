@@ -10,11 +10,11 @@ class AssignmentNode(ASTNode):
         return f"AssignmentNode(variable_name={self.variable_name}, value={self.value})"
 
 class PrintNode(ASTNode):
-    def __init__(self, variable_name):
-        self.variable_name = variable_name
+    def __init__(self, value):
+        self.value = value
 
     def __repr__(self):
-        return f"PrintNode(variable_name={self.variable_name})"
+        return f"PrintNode(value={self.value})"
 
 class Parser:
     def __init__(self, tokens):
@@ -46,13 +46,21 @@ class Parser:
         self.consume('A')
         variable_name = self.consume('VAR')
         self.consume('ASSIGN')
-        value = self.consume('NUMBER')
+        value = self.consume_value()
         return AssignmentNode(variable_name[1], value[1])
 
     def parse_print(self):
         self.consume('PRINT')
-        variable_name = self.consume('VAR')
-        return PrintNode(variable_name[1])
+        value = self.consume_value()
+        return PrintNode(value[1])
+
+    def consume_value(self):
+        token = self.tokens[self.pos]
+        if token[0] in ['NUMBER', 'STRING', 'VAR']:
+            self.pos += 1
+            return token
+        else:
+            raise SyntaxError(f"Expected NUMBER or STRING but got {token}")
 
     def consume(self, token_type):
         token = self.tokens[self.pos]

@@ -6,6 +6,8 @@ TOKEN_SPECIFICATION = [
     ('NUMBER', r'^\d+'),
     ('STRING', r'^".*"'),
     ('ASSIGN', r'\basignale\b'),
+    ('ADD', r"\bagregale\b"),
+    ('SUB', r"\bquitale\b"),
     ('REPEAT', r'^repite:'),
     ('TIMES', r'\bveces\b'),
     ('TYPE', r'\btipo\b'),

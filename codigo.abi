@@ -1,3 +1,29 @@
-comentario: mostrando ciclos en abi
+comentario: si Alan tiene dos manzanas 
+a manzanas asignale "dos"
 
-repite: muestra "Hola" 20 veces
+comentario: Jesus le da mil
+a manzanas agregale "mil"
+
+comentario: Ana le quita dos
+a manzanas quitale "dos"
+
+comentario: pero José le dona 300
+a manzanas agregale "trescientas"
+
+comentario: y luego Yrvin se come mil
+
+a manzanas quitale "mil"
+comentario: ¿cuantas manzanas le quedan a Alan?
+
+muestra "A Alan le quedan: "
+muestra manzanas
+muestra "manzanas"
+
+
+a cantidad asignale 2
+a cantidad agregale 1000
+a cantidad quitale 2
+a cantidad agregale 300
+a cantidad quitale 1000
+muestra "__________"
+muestra x

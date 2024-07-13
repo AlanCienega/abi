@@ -140,8 +140,48 @@ a mi_edad asignale 5
 muestra mi_edad
 ```
 
-en ese ejemplo la salida del codigo seria
-5
+## incremento y decremento de variables
+se hacen con las palabras reservadas "agregale" y "quitale"
+```
+a monedas asignale 20
+a monedas agregale 5
+a monedas quitale 3
+
+muestra monedas
+
+comentario: la salida seria 22
+```
+
+## ¡También funciona con cdenas de texto!
+```
+comentario: si Alan tiene dos manzanas 
+a manzanas asignale "dos"
+
+comentario: Jesus le da mil
+a manzanas agregale "mil"
+
+comentario: Ana le quita dos
+a manzanas quitale "dos"
+
+comentario: pero José le dona 300
+a manzanas agregale "trescientas"
+
+comentario: y luego Yrvin se come mil
+a manzanas quitale "mil"
+
+comentario: ¿cuantas manzanas le quedan a Alan?
+
+muestra "A Alan le quedan: "
+muestra manzanas
+muestra "manzanas"
+```
+Resultado en la terminal
+```
+A Alan le quedan: 
+trescientas
+manzanas
+```
+<h1 style="text-align:center; font-size: 500%"> 🤯 </h1>
 
 ## condicionales
 

@@ -29,14 +29,18 @@ class Interpreter:
   def execute_add(self, node):
     if node.value_type == "NUMBER":
       self.variables[node.variable_name] += int(node.value)
-    else:
+    elif node.value_type == "STRING":
       self.variables[node.variable_name] += node.value.strip('"')
+    else:
+      self.variables[node.variable_name] += int(self.variables[node.value])
 
   def execute_substract(self, node):
     if node.value_type == "NUMBER":
       self.variables[node.variable_name] -= int(node.value)
-    else:
+    elif node.value_type == "STRING":
       self.variables[node.variable_name] = self.variables[node.variable_name].replace(node.value.strip('"'), '')
+    else:
+      self.variables[node.variable_name] -= int(self.variables[node.value])
 
   def execute_print(self, node):
     value = node.value
@@ -50,5 +54,9 @@ class Interpreter:
     for _ in range(times):
       if isinstance(node.statement, PrintNode):
         self.execute_print(node.statement)
+      elif isinstance(node.statement, AddNode):
+        self.execute_add(node.statement)
+      elif isinstance(node.statement, SubtractNode):
+        self.execute_substract(node.statement)
       else:
         raise RuntimeError(f"Unsupported statement in repeat: {type(node.statement)}")

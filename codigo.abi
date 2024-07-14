@@ -1,6 +1,10 @@
-a cancion asignale "un elefante se columpiaba sobre la tela de una araña"
+a dinero asignale 100
+a precio_de_dulces asignale 11
+a visitas_a_tienda asignale 5
+a premio_de_tragamonedas asignale 10
 
-a cancion quitale "araña"
-a cancion agregale "señora que vendia telas"
 
-muestra cancion
+repite: a dinero quitale precio_de_dulces visitas_a_tienda veces
+repite: a dinero agregale premio_de_tragamonedas visitas_a_tienda veces
+
+muestra dinero

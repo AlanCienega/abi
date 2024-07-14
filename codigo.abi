@@ -1,7 +1,6 @@
-comentario: iterar con valores de variables
+a cancion asignale "un elefante se columpiaba sobre la tela de una araña"
 
-a saludo asignale "Hola compa"
-a n asignale 2
+a cancion quitale "araña"
+a cancion agregale "señora que vendia telas"
 
-
-repite: muestra saludo n veces
+muestra cancion

@@ -183,6 +183,17 @@ manzanas
 ```
 <h1 style="text-align:center; font-size: 500%"> 🤯 </h1>
 
+Ten en cuenta que se quitan y ponen fragmentos de cadenas de texto mas no se convierte a numeros, veamos otro ejemplo:
+```
+a cancion asignale "un elefante se columpiaba sobre la tela de una araña"
+
+a cancion quitale "araña"
+a cancion agregale "señora que vendia telas"
+
+muestra cancion
+```
+y como salida tendrias "un elefante se columpiaba sobre la tela de una señora que vendia telas"
+
 ## condicionales
 
 ```

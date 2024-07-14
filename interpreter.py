@@ -21,7 +21,6 @@ class Interpreter:
         raise RuntimeError(f"Unknown node type: {type(node)}")
 
   def execute_assignment(self, node):
-    # assing depending by value_type
     if node.value_type == "NUMBER":
       self.variables[node.variable_name] = int(node.value)
     else:
@@ -47,7 +46,8 @@ class Interpreter:
       print(value.strip('"'))
 
   def execute_repeat(self, node):
-    for _ in range(node.times):
+    times = self.variables[node.times] if node.times in self.variables else int(node.times)
+    for _ in range(times):
       if isinstance(node.statement, PrintNode):
         self.execute_print(node.statement)
       else:

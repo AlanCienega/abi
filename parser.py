@@ -116,9 +116,9 @@ class Parser:
     def parse_repeat(self):
         self.consume('REPEAT')
         statement = self.parse_statement()
-        times = self.consume('NUMBER')
+        times = self.consume_value()
         self.consume('TIMES')
-        return RepeatNode(statement, int(times[1]))
+        return RepeatNode(statement, times[1])
 
     def consume(self, token_type):
         token = self.tokens[self.pos]

@@ -33,6 +33,14 @@
 				{
 					"name": "keyword.function.abi",
 					"match": "\\b(fin|bloque|repite|ejecuta)\\b"
+				},
+				{
+					"name": "keyword.operator.abi",
+					"match": "\\b(es|y)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "\\b(verdadero|falso|vacio)\\b"
 				}
 			]
 		},

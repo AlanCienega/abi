@@ -1,0 +1,9 @@
+comentario: vamos a decrentar una variable usando la palabra reservada "quitale"
+
+a numero asignale 20
+
+a numero quitale 3
+a numero quitale 3
+a numero quitale 3
+
+muestra  numero

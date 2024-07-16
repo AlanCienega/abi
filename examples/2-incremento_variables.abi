@@ -1,0 +1,11 @@
+comentario: a una variable se le aumenta el valor inicial
+
+a mi_billetera asignale 50
+muestra "El saldo inicial de la billetera es:"
+muestra mi_billetera
+
+
+a mi_billetera agregale 10
+
+muestra "Tu saldo actual en la billetera es:"
+muestra mi_billetera

@@ -1,0 +1,12 @@
+comentario: imagina que tienes un nuevo trabajo, te pagarán 14 dolares por tarea
+comentario: aun no sabes cuantas tareas van a ser, pero puedes calcular y modificar
+comentario: el parametro conforme lo ocupes
+
+a numero_de_tareas asignale 26
+a pago_por_tarea asignale 14
+a dinero_acumulado asignale 0
+
+repite: a dinero_acumulado agregale pago_por_tarea numero_de_tareas veces
+
+muestra "has conseguido:"
+muestra dinero_acumulado

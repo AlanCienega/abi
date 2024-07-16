@@ -1,0 +1,12 @@
+comentario: a una cadena de texto le puedes hacer oparaciones, por ejemplo agregar o quitar
+comentario: fragmentos de texto
+
+a cancion asignale "los pollitos dicen: "
+a cancion agregale "pio pio pio "
+
+muestra cancion
+
+a cancion quitale "pio "
+a cancion agregale "tenemos frío"
+
+muestra cancion

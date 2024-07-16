@@ -1,0 +1,4 @@
+a texto asignale "la vaca y el pollito"
+a texto quitale "la "
+a texto quitale "el "
+muestra texto

@@ -14,6 +14,8 @@ def main():
         "tests/agregar_texto.abi": "uno dos tres cuatro\n",
         "tests/quitar_texto.abi": "vaca y pollito\n",
         "tests/ciclo.abi": "Abi\nAbi\nAbi\n",
+        "tests/incremento_arreglo.abi": "['uno', 'otro']\n",
+        "tests/decremento_arreglo.abi": "['equis', 'ye']\n",
     }
 
     for test_file, expected_output in tests.items():

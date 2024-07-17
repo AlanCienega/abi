@@ -107,7 +107,7 @@ class Parser:
 
     def consume_value(self):
         token = self.tokens[self.pos]
-        if token[0] in ['NUMBER', 'STRING', 'VAR']:
+        if token[0] in ['NUMBER', 'STRING', 'EMPTY', 'SOMETHING', 'VAR']:
             self.pos += 1
             return token
         else:

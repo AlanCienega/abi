@@ -40,7 +40,7 @@
 				},
 				{
 					"name": "support.type",
-					"match": "\\b(verdadero|falso|vacio)\\b"
+					"match": "\\b(verdadero|falso|vacio|algo)\\b"
 				}
 			]
 		},

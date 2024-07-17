@@ -23,6 +23,8 @@ class Interpreter:
   def execute_assignment(self, node):
     if node.value_type == "NUMBER":
       self.variables[node.variable_name] = int(node.value)
+    elif node.value_type == "EMPTY":
+      self.variables[node.variable_name] = []
     else:
       self.variables[node.variable_name] = node.value.strip('"')
 
@@ -30,13 +32,18 @@ class Interpreter:
     if node.value_type == "NUMBER":
       self.variables[node.variable_name] += int(node.value)
     elif node.value_type == "STRING":
-      self.variables[node.variable_name] += node.value.strip('"')
+      if isinstance(self.variables[node.variable_name], str):
+        self.variables[node.variable_name] += node.value.strip('"')
+      else:
+        self.variables[node.variable_name].append(node.value.strip('"'))
     else:
       self.variables[node.variable_name] += int(self.variables[node.value])
 
   def execute_substract(self, node):
     if node.value_type == "NUMBER":
       self.variables[node.variable_name] -= int(node.value)
+    elif node.value_type == "SOMETHING":
+      self.variables[node.variable_name].pop()
     elif node.value_type == "STRING":
       self.variables[node.variable_name] = self.variables[node.variable_name].replace(node.value.strip('"'), '')
     else:

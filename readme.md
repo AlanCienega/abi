@@ -113,19 +113,22 @@ a la_puerta asignale "negra"
 
 ### arreglos
 
+es un tipo de dato que puede almacenar varios elementos, los cuales los puedes recorrer, imagina que tienes un contenedor con compartimientos vacios dentro
+
 ```
-comentario: define un arreglo
-a las_tortillas asignale vacio
+a la_caja_secreta asignale vacio
+comentario: el contenedor ahora  tendria el espacio vacio []
+a la_caja_secreta agregale "una cuerda"
+a la_caja_secreta agregale "un compartimiento secreto"
+a la_caja_secreta agregale "foto de fiesta de navidad"
+comentario: como no quieres que se vea lo que hay en la caja secreta quitale algunos elementos
+comentario: con la instruccion "quitala algo" se elimina el ultimo elemento
+a la_caja_secreta quitale algo
+comentario: aun se muestra el compartimiento secreto
+a la_caja_secreta quitale algo
+comentario: listo, ahora si muestras la caja secreta solo veran la cuerda
 
-es como tener una caja con espacios para tortillas [   ] y este se encuentra vacio en un inicio
-pero conforme le vas agegando cosa se va llenando
-
-a las_tortillas agregale "azules"
-a las_tortillas agregale "verdes"
-
-ahora las_tortillas tendran este valor: ["azules", "verdes"]
-
-
+muestra la_caja_secreta
 ```
 
 ## actualizar variables
@@ -351,4 +354,7 @@ en linux algo asi:
 luego reinicia vscode
 ## glosario
 
-- variables: Son como cajitas donde guardas cosas, en el lenguaje Abi solo enteros, letras, texto etc
+- variables: Espacio de memoria para almacenar tipos de datos, enteros, logicos, arreglos etc.
+- numeros enteros: son los numeros sean negativos o positivos enteros (-n, -2, -1, 0, 1, 2, n)
+- datos logicos: Son datos que representan un valor cierto o falso.
+- arreglos: son un tipo de dato que puede almacenar varios tipos de datos separados entre si, pero se pueden  recorrer

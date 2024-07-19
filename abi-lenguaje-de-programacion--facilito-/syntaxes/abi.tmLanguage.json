@@ -28,7 +28,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.abi",
-					"match": "\\b(a|asignale|agregale|quitale|veces)\\b"
+					"match": "\\b(a|asignale|agregale|quitale|veces|si|no)\\b"
 				},
 				{
 					"name": "keyword.function.abi",

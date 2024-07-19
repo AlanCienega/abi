@@ -1,16 +1,3 @@
-comentario: tienes una caja con un secreto y tu amigo quiera verla
+a wrande asignale verdadero
 
-a la_caja_secreta asignale vacio
-comentario: el contenedor ahora  tendria el espacio vacio []
-a la_caja_secreta agregale "una cuerda"
-a la_caja_secreta agregale "un compartimiento secreto"
-a la_caja_secreta agregale "foto de fiesta de navidad"
-comentario: como no quieres que se vea lo que hay en la caja secreta quitale algunos elementos
-comentario: con la instruccion "quitala algo" se elimina el ultimo elemento
-a la_caja_secreta quitale algo
-comentario: aun se muestra el compartimiento secreto
-a la_caja_secreta quitale algo
-comentario: listo, ahora si muestras la caja secreta solo veran la cuerda
-
-muestra "La caja secreta contiene:"
-muestra la_caja_secreta
+si wrande es verdadero, muestra "Yo wrande, tu wrande, el-ella wrande" si no muestra  "Yo grande, tu grande, el-ella grande"

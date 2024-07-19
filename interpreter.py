@@ -1,4 +1,4 @@
-from parser import AssignmentNode, PrintNode, RepeatNode, AddNode, SubtractNode
+from parser import AssignmentNode, PrintNode, RepeatNode, AddNode, SubtractNode, IfNode
 
 class Interpreter:
   def __init__(self, ast):
@@ -17,6 +17,8 @@ class Interpreter:
         self.execute_add(node)
       elif isinstance(node, SubtractNode):
         self.execute_substract(node)
+      elif isinstance(node, IfNode):
+        self.execute_if(node)
       else:
         raise RuntimeError(f"Unknown node type: {type(node)}")
 
@@ -67,3 +69,26 @@ class Interpreter:
         self.execute_substract(node.statement)
       else:
         raise RuntimeError(f"Unsupported statement in repeat: {type(node.statement)}")
+
+  def execute_if(self, node):
+    condition = node.condition
+    variable, expected_value = condition
+    variable_value = self.variables.get(variable[1])
+    if variable_value == expected_value[1]:
+      self.execute_node(node.true_branch)
+    else:
+      self.execute_node(node.false_branch)
+  
+  def execute_node(self, node):
+    if isinstance(node, PrintNode):
+      self.execute_print(node)
+    elif isinstance(node, AssignmentNode):
+      self.execute_assignment(node)
+    elif isinstance(node, RepeatNode):
+      self.execute_repeat(node)
+    elif isinstance(node, AddNode):
+      self.execute_add(node)
+    elif isinstance(node, SubtractNode):
+      self.execute_substract(node)
+    else:
+        raise RuntimeError(f"Unsupported node type: {type(node)}")

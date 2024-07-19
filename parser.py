@@ -43,6 +43,15 @@ class RepeatNode(ASTNode):
     def __repr__(self):
         return f"RepeatNode(statement={self.statement}, times={self.times})"
 
+class IfNode(ASTNode):
+    def __init__(self, condition, true_branch, false_branch=None):
+        self.condition = condition
+        self.true_branch = true_branch
+        self.false_branch = false_branch
+
+    def __repr__(self):
+        return f"IfNode(condition={self.condition}, true_branch={self.true_branch}, false_branch={self.false_branch})"
+
 class Parser:
     def __init__(self, tokens):
         self.tokens = tokens
@@ -65,6 +74,8 @@ class Parser:
             return self.parse_print()
         elif token[0] == 'REPEAT':
             return self.parse_repeat()
+        elif token[0] == 'IF':
+            return self.parse_if()
         elif token[0] in ['NEWLINE', 'COMMENT']:
             self.pos += 1
             return None
@@ -99,7 +110,6 @@ class Parser:
         value = self.consume_value()
         return SubtractNode(variable_name[1], value[1], value_type=value[0])
     
-
     def parse_print(self):
         self.consume('PRINT')
         value = self.consume_value()
@@ -107,7 +117,7 @@ class Parser:
 
     def consume_value(self):
         token = self.tokens[self.pos]
-        if token[0] in ['NUMBER', 'STRING', 'EMPTY', 'SOMETHING', 'VAR']:
+        if token[0] in ['NUMBER', 'STRING', 'EMPTY', 'SOMETHING', 'VAR', 'TRUE', 'FALSE']:
             self.pos += 1
             return token
         else:
@@ -119,6 +129,26 @@ class Parser:
         times = self.consume_value()
         self.consume('TIMES')
         return RepeatNode(statement, times[1])
+
+    def parse_if(self):
+        self.consume('IF')
+        condition = self.parse_condition()
+        self.consume('THEN')
+        true_branch = self.parse_statement()
+
+        false_branch = None
+        if self.pos < len(self.tokens) and self.tokens[self.pos][0] == 'IF' and self.tokens[self.pos + 1][0] == 'NO':
+            self.consume('IF')
+            self.consume('NO')
+            false_branch = self.parse_statement()
+
+        return IfNode(condition, true_branch, false_branch)
+
+    def parse_condition(self):
+        left = self.consume('VAR')
+        self.consume('IS')
+        right = self.consume_value()
+        return (left, right)
 
     def consume(self, token_type):
         token = self.tokens[self.pos]

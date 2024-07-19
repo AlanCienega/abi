@@ -1,3 +1,7 @@
-a wrande asignale verdadero
+a salario asignale 1000
+a aumento asignale falso
 
-si wrande es verdadero, muestra "Yo wrande, tu wrande, el-ella wrande" si no muestra  "Yo grande, tu grande, el-ella grande"
+si aumento es verdadero, a salario agregale 500 si no muestra "Renuncia, vales mas"
+
+muestra "tu salario es:"
+muestra salario

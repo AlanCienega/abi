@@ -205,22 +205,23 @@ y como salida tendrias "un elefante se columpiaba sobre la tela de una señora q
 ## condicionales
 Se usan como ya sabes usarlas.
 
-si se cumple una condicion, procedes a mostrar lo que sucede.
+si se cumple una condición, procedes a mostrar lo que sucede.
 
-es decir, tedrias que usar la palabra "si", luego un valor verdadero o falso dependiendo tu necesidad, seguido de una coma "," y entonces sigue la accion, veamos algunos ejemplo del uso real en el español:
+es decir, tendrías que usar la palabra "si", luego un valor verdadero o falso dependiendo tu necesidad, seguido de una coma "," y entonces sigue la acción, veamos algunos ejemplo del uso real en el español:
 
 Si tienes hambre, come.
 
-Si tu telefono se romple, haz valida la garantía.
+Si tu teléfono se rompe, haz valida la garantía.
 
 Si sabes escribir, ya sabes programar en Abi.
 
-En codigo es bastante parecido:
+En código es bastante parecido:
+
 
 ```
 a los_pollitos_tienen_hambre asignale verdadero
 
-si los_pollitos_tienen_hambre, muestra "los pollitos dicen pio pio pio"
+si los_pollitos_tienen_hambre es verdadero, muestra "los pollitos dicen pio pio pio" si no muestra ""
 
 ```
 la salida del codigo al ejecutarlo seria
@@ -228,6 +229,17 @@ la salida del codigo al ejecutarlo seria
 los pollitos dicen pio pio pio
 ```
 pero si cambias el valor de los_pollitos_tienen_hambre a falso, entonces simplemente no obtendrias nada en el resultado de ejecutar el programa.
+
+## También funciona combinando las otras funciones que ya sabes usar
+```
+a salario asignale 1000
+a aumento asignale falso
+
+si aumento es verdadero, a salario agregale 500 si no muestra "Renuncia, vales mas"
+
+muestra "tu salario es:"
+muestra salario
+```
 
 ## Palabras reservadas
 

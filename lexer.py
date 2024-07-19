@@ -4,7 +4,7 @@ import re
 TOKEN_SPECIFICATION = [
   ('COMMENT', r'^comentario: .*'),
   ('NUMBER', r'^\d+'),
-  ('STRING', r'^".*"'),
+  ('STRING', r'^".*?"'),
   ('ASSIGN', r'\basignale\b'),
   ('ADD', r"\bagregale\b"),
   ('SUB', r"\bquitale\b"),

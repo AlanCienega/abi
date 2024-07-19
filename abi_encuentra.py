@@ -16,6 +16,8 @@ def main():
         "tests/ciclo.abi": "Abi\nAbi\nAbi\n",
         "tests/incremento_arreglo.abi": "['uno', 'otro']\n",
         "tests/decremento_arreglo.abi": "['equis', 'ye']\n",
+        "tests/asignar-boolean.abi": "verdadero\n",
+        "tests/incremento-en-ciclo.abi": "30\n",
     }
 
     for test_file, expected_output in tests.items():

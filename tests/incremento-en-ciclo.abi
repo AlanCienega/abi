@@ -1,0 +1,4 @@
+a contador asignale 0
+
+repite: a contador agregale 3 10 veces
+muestra contador

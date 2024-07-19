@@ -2,7 +2,7 @@
 
 ## El lenguaje para que de una vez por todas aprendas a programar
 
-Basado en el lenguaje natural del español mexicano, y listo para que hasta un bebé pueda aprender, tenemos un lenguaje que hace exactamente lo que le estas escribiendo.
+Basado en el lenguaje natural del español mexicano, y listo para que hasta un bebé pueda aprender, tenemos un lenguaje que hace exactamente lo que le estás escribiendo.
 
 ## Hola mundo en Abi
 
@@ -17,9 +17,9 @@ Hola mundo
 ```
 ## ¿Por qué programar con Abi?
 
-La diferencia con otros lenguajes en español es que este no "traduce" las palabras reservadas tipicas de los lenguajes, sino que estas se integran directo en las frases para sonar de manera lógica tal que se pueda entender  lo que hace el lenguaje incluso sin tener que escribir, alguien simplemente te puede contar lo que esta leyendo y al final sabes donde y que valores toman las entidades que te estan contando 
+La diferencia con otros lenguajes en español es que este no "traduce" las palabras reservadas típicas de los lenguajes, sino que estas se integran directo en las frases para sonar de manera lógica tal que se pueda entender lo que hace el lenguaje incluso sin tener que escribir, alguien simplemente te puede contar lo que está leyendo y al final sabes donde y que valores toman las entidades que te están contando.
 
-Es mucho mas facil entender y guardar en la memoria (humana)
+Es mucho más fácil entender y guardar en la memoria (humana).
 
 ```
 a mi_edad asignale 20
@@ -30,10 +30,10 @@ mi_edad <- 20
 ```
 tambien podrias pensar en "mi_edad flecha izquierda 20"
 
-pero al final, te quedarias con que mi_edad vale 20 porque sabes que se le ha asignado ese valor, puesto que ya es una frase no tienes que aprender un lenguaje de programacion, sino que ya saabes un lenguaje, ESPAÑOL, ahora solo te faltaria saber programar pero en gran parte tambien ya lo sabes, le das valores a las cosas y tambien las modificas, entonces una vez que aprendas a hacer operaciones basicas con este lenguaje, estaras listo para dar el salto a cualquier otro lenguaje de programación
+Pero al final, te quedarías con que mi_edad vale 20 porque sabes que se le ha asignado ese valor, puesto que ya es una frase no tienes que aprender un lenguaje de programación, sino que ya sabes un lenguaje, ESPAÑOL, ahora solo te faltaria saber programar pero en gran parte también ya lo sabes, le das valores a las cosas y también las modificas, entonces una vez que aprendas a hacer operaciones básicas con este lenguaje, estarás listo para dar el salto a cualquier otro lenguaje de programación.
 
 ### Comparación de ciclos
-Los loops (ciclos) en programación simplemente son repeticiones de algo n cantidad de veces
+Los loops (ciclos) en programación simplemente son repeticiones de algo n cantidad de veces.
 
 
 <b>Ciclo en otro lenguaje en español</b>
@@ -47,9 +47,9 @@ FinPara
 ```
 repite:  muestra "hola Mundo" 5 veces
 ```
-En el español los dos puntos ":" se usan como ejemplificacion del resto del contenido.
+En el español los dos puntos ":" se usan como ejemplificación del resto del contenido.
 
-Por eso mismo cuando en Abi te encuentras con los dos puntos tu cerebro ya va a saber que lo que sigue es una accion derivada de la palabra que antecede los dos puntos.
+Por eso mismo cuando en Abi te encuentras con los dos puntos tu cerebro ya va a saber que lo que sigue es una acción derivada de la palabra que antecede los dos puntos.
 
 Ejemplo: Esta misma linea es un ejemplo de ello.
 
@@ -63,11 +63,13 @@ ejecuta: unBloqueDeCodigo
 
 ```
 
+## ¿Quién y cómo usar el lenguaje?
+Si hablas español y estás iniciando en el mundo de la programación, muchas veces usan frases que hacen cosas que pueden ser sentencias de un lenguaje de programación, lo que vas a hacer con Abi Lenguaje de Programación es entrenar e interiorizar las sentencias. De esta forma cuando entres a aprender otro lenguaje cualquiera que este sea se haga muy facil de usar, lo más importante son los conceptos.
 
-## definicion de variables
+## Definición de variables
+Imagina que tienes cartones para hacer cajas. Todas las cajas tienen la misma base, pero cada una necesita una tapa especial. La tapa tiene agujeros en forma de números o letras, pero no de ambos. La tapa define el tipo de datos que podrás poner dentro de tu caja. Si la tapa tiene agujeros en forma de números, solo podrás meter números en la caja. Si tiene agujeros en forma de letras, solo podrás meter letras. Así, la tapa determina el tipo de datos que la caja puede contener.
 
-Imagina que tienes carton para hacer cajas, la base es la misma, pero le debes poner una tapa con agujeros en forma de enteros o letras, NO AMBAS.
-la tapa define el tipo de datos que le vas a poder meter a tu cajita
+Solo pon atención a los arreglos, esos serian como contenedores, y puedes guardar cualquier cosa.
 
 ## Sintaxis
 
@@ -75,19 +77,21 @@ la tapa define el tipo de datos que le vas a poder meter a tu cajita
 a tu_contenedor asignale 5
 ```
 
-seria el equivalente a guardar un número entero 5 dentro un elemento llamado "tu_contenedor" y ahora ese elemento vale 5
+Sería el equivalente a guardar un número entero 5 dentro un elemento llamado "tu_contenedor" y ahora ese elemento vale 5.
 
 ## comentarios
+Esto en el código no representa alguna acción, simplemente es para poder hacer tus anotaciones en caso que quieras aclararte algo cuando veas tu código.
 
-inician con la palabra reservada "coemtario:" es importante los dos puntos no solo por sintaxis sino por emular correctamente el lenguaje
+Inician con la palabra reservada "comentario:" es importante los dos puntos no solo por sintaxis sino por emular correctamente el lenguaje
+
 
 ```
 comentario: esto no lo va a interpretar el compilador, solo es para anotaciones
 ```
 
-## declaracion de variables
+## Declaración de variables
 
-en este lenguaje tienes que definir tu variable con un valor inicial con la palabra "asignale"
+En este lenguaje tienes que definir tu variable con un valor inicial con la palabra "asignale".
 
 ### números
 
@@ -105,7 +109,7 @@ a tres_monitores asignale falso
 
 ## texto
 
-Las cadenas de texto (strings), en la mayoria de lenguajes de programación se representan encerradas en comillas dobles, en el español se usan para  poner frases o citas, muy parecido pero ya que le das ese significado te va a hacer todo el sentido del mundo en los otros lenguajes.
+Las cadenas de texto (strings), en la mayoría de lenguajes de programación se representan encerradas en comillas dobles, en el español se usan para  poner frases o citas, muy parecido pero ya que le das ese significado te va a hacer todo el sentido del mundo en los otros lenguajes.
 
 ```
 a la_puerta asignale "negra"
@@ -113,7 +117,8 @@ a la_puerta asignale "negra"
 
 ### arreglos
 
-es un tipo de dato que puede almacenar varios elementos, los cuales los puedes recorrer, imagina que tienes un contenedor con compartimientos vacios dentro
+Es un tipo de dato que puede almacenar varios elementos, los cuales los puedes recorrer, imagina que tienes un contenedor con compartimentos vacíos dentro.
+
 
 ```
 a la_caja_secreta asignale vacio
@@ -226,6 +231,7 @@ pero si cambias el valor de los_pollitos_tienen_hambre a falso, entonces simplem
 
 ## Palabras reservadas
 
+- comentario:
 - agregale
 - quitale
 - a
@@ -236,52 +242,15 @@ pero si cambias el valor de los_pollitos_tienen_hambre a falso, entonces simplem
 - repite
 - recorre
 - veces
-- arreglo
-- cadena
-- entero
-- logico
 - verdadero
 - falso
 - vacio
-- comentario:
 
-Nota que en el español tienes conectores como "a", "en", "de" que muchas veces no notamos pero son de las cosas mas utiles para poder darle lógica a la oracion que estas armando, para este lenguaje ademas de funcionar como conector, tambien marcan sintaxis valida de ABI, tomemos como ejemplo "a mi_variable agregale 5":
+Nota que en español tienes conectores como "a", "en", "de" que muchas veces no notamos, pero son de las cosas más útiles para darle lógica a la oración que estás armando. En este lenguaje, además de funcionar como conectores, también marcan la sintaxis válida de ABI. Tomemos como ejemplo "a mi_variable agregale 5":
 
-el equivalente de "a mi variable" seria "variable = " que entendemos que sera una asignación, siempre que aprendes un lenguaje te confundes con el "=" porque piensas que es una evaluación y normalmente se tarda en acostumbrarse a mentalziar que en realidad es una asignacion, por eso con un aletra "a" nos hace mas sentido que vamos a hacer algo con la cosa que sigue.
+El equivalente de "a mi_variable" sería "variable =", lo que entendemos como una asignación. Cuando aprendes un nuevo lenguaje, es común confundirse con el "=", ya que parece una evaluación. Normalmente, se tarda en acostumbrarse a pensar en él como una asignación. Por eso, con la letra "a", tiene más sentido que vamos a hacer algo con la variable que sigue.
 
 ## soporte para ciclos
-
-podrias recorrer un arreglo, recordemos que a las_tortillas le agrgamos dos valores
-
-### recorre (para arreglos)
-
-```
-recorre las_tortillas y muestra la_tortilla
-```
-
-En python:
-
-```
-for la_tortilla in las_tortillas:
-  print(la_tortilla)
-```
-
-Observemos que nuestra "funcion" recorre, no nos define a la_tortilla en la declaracion del ciclo, pero podemos acceder a ella en el final de la sentencia debido a una declaracion interna del lenguaje que hace mas facil la lectura.
-
-ademas los delimitadores del ciclo "recorre" y "y" envuelven al arreglo que vamos a recorrer, luego viene la accion y finalmente la variable anonima (al menos hasta que le pongas nombre)
-
-Internamente el lenguaje crea una variable que no tiene nombre hasta que accedes a ella, en este caso definimos por convension y debido al contexto a "la_tortilla" pero pudimos haber escrito cualquier nombre
-
-```
-recorre: las_tortillas y muestra un_perro
-```
-
-como resultado seguiria nostrandonos
-
-```
-blancas
-azules
-```
 
 ## repite (ciclo for)
 
@@ -307,9 +276,39 @@ muestra "hola" 5 veces
 
 la palabra reservada "repite", de nuevo es un gran delimitador que ademas marca una correcta sintaxis, que ademas nos indica lo que hay que hacer con lo que sigue.
 
+### recorre (para arreglos)
+
+```
+recorre las_tortillas y muestra la_tortilla
+```
+
+En python:
+
+```
+for la_tortilla in las_tortillas:
+  print(la_tortilla)
+```
+
+Observemos que nuestra "función" recorre, no nos define a la_tortilla en la declaración del ciclo, pero podemos acceder a ella en el final de la sentencia debido a una declaración interna del lenguaje que hace más fácil la lectura.
+
+Además los delimitadores del ciclo "recorre" y "y" envuelven al arreglo que vamos a recorrer, luego viene la acción y finalmente la variable anónima (al menos hasta que le pongas nombre)
+
+Internamente el lenguaje crea una variable que no tiene nombre hasta que accedes a ella, en este caso definimos por convención y debido al contexto a "la_tortilla" pero pudimos haber escrito cualquier nombre.
+
+```
+recorre: las_tortillas y muestra un_perro
+```
+
+como resultado seguiria nostrandonos
+
+```
+blancas
+azules
+```
+
 ## funciones sin parametros
 
-las funciones o bloques son fragmentos de codigo que van a encapsular funcionalidades, asi si queremos hacer eso varias veces en lugar de repetir el codigo, mandamos a llamar a la funcion
+las funciones o bloques son fragmentos de codigo que van a encapsular funcionalidades, asi si queremos hacer eso varias veces en lugar de repetir el codigo, mandamos a llamar a la funcion.
 
 ```
 bloque: saludo
@@ -357,4 +356,5 @@ luego reinicia vscode
 - variables: Espacio de memoria para almacenar tipos de datos, enteros, logicos, arreglos etc.
 - numeros enteros: son los numeros sean negativos o positivos enteros (-n, -2, -1, 0, 1, 2, n)
 - datos logicos: Son datos que representan un valor cierto o falso.
-- arreglos: son un tipo de dato que puede almacenar varios tipos de datos separados entre si, pero se pueden  recorrer
+- arreglos: son un tipo de dato que puede almacenar varios tipos de datos separados entre si, pero se pueden  recorrer.
+- Sentencias: Son las unidades ejecutable más pequeña de un programa, en otras palabras una línea de código escrita es una sentencia.

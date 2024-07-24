@@ -73,6 +73,10 @@ Solo pon atención a los arreglos, esos serian como contenedores, y puedes guard
 
 ## Sintaxis
 
+Asegurate de instalar la Extensión oficial de Abi Lenguaje de programación, asi tendras un resaltado en tu editor para hacerte aun mas sencillo leer el código
+
+![alt text](images/vscodex.gif)
+
 ```
 a tu_contenedor asignale 5
 ```
@@ -322,13 +326,25 @@ azules
 
 las funciones o bloques son fragmentos de codigo que van a encapsular funcionalidades, asi si queremos hacer eso varias veces en lugar de repetir el codigo, mandamos a llamar a la funcion.
 
-```
-bloque: saludo
-  muestra "Hola desde:"
-  muestra "un bloque"
-fin
+Preservando el uso correcto y simple del español, tenemos un forma clara para escribir funciones, éstas se pueden entender como actividades.
 
-ejecuta: saludo
+```
+a lampara asignale "apagada"
+
+comentario: comienza con actividad: <nombre-de-actividad> y cuando quieras terminar de escribir la actividad da enter 2 veces
+actividad: presionarInterruptor
+si lampara es "encendida", a lampara asignale "apagada" si no a lampara asignale "encendida"
+muestra lampara
+
+
+comentario: aqui se manda a llamar varias veces el interruptor para activar o desactivar la lampara
+
+presionarInterruptor
+presionarInterruptor
+presionarInterruptor
+presionarInterruptor
+
+
 
 ```
 

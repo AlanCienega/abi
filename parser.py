@@ -68,7 +68,7 @@ class Parser:
     def parse_statement(self):
         token = self.tokens[self.pos]
 
-        if token[0] == 'A':
+        if token[0] == 'TO':
             return self.parse_assignment_or_operation()
         elif token[0] == 'PRINT':
             return self.parse_print()
@@ -80,10 +80,10 @@ class Parser:
             self.pos += 1
             return None
         else:
-            raise SyntaxError(f"Unexpected token: {token}")
+            raise SyntaxError(f"Sentencia no soportada: {token}")
 
     def parse_assignment_or_operation(self):
-        self.consume('A')
+        self.consume('TO')
         variable_name = self.consume('VAR')
         operation_token = self.tokens[self.pos][0]
         if operation_token == 'ASSIGN':
@@ -93,7 +93,7 @@ class Parser:
         elif operation_token == 'SUB':
             return self.parse_subtraction(variable_name)
         else:
-            raise SyntaxError(f"Unexpected operation token: {operation_token}")
+            raise SyntaxError(f"Operación no soportada: {operation_token}")
 
     def parse_assignment(self, variable_name):
         self.consume('ASSIGN')
@@ -121,7 +121,7 @@ class Parser:
             self.pos += 1
             return token
         else:
-            raise SyntaxError(f"Expected a value but got {token}")
+            raise SyntaxError(f"Esperaba un valor pero se encontró {token}")
 
     def parse_repeat(self):
         self.consume('REPEAT')
@@ -156,4 +156,4 @@ class Parser:
             self.pos += 1
             return token
         else:
-            raise SyntaxError(f"Expected token {token_type} but got {token}")
+            raise SyntaxError(f"Esperaba un token {token_type} pero se encontró {token}")

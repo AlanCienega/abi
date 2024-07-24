@@ -13,7 +13,7 @@ TOKEN_SPECIFICATION = [
   ("EMPTY", r'\bvacio\b'),
   ("SOMETHING", r'\balgo\b'),
   ('PRINT', r'\bmuestra\b'),
-  ('A', r'\ba\b'),
+  ('TO', r'\ba\b'),
   ('IS', r'\bes\b'),
   ('IF', r'\bsi\b'),
   ('NO', r'\bno\b'),

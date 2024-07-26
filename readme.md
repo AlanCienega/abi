@@ -348,12 +348,7 @@ presionarInterruptor
 
 ```
 
-la salida seria;
-
-```
-Hola desde
-un bloque
-```
+la salida seria seguir teniendo la lampara apagada debido a el numero de veces que has presionado el interruptor.
 
 ## funciones con parametros
 

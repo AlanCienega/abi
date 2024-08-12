@@ -1,0 +1,7 @@
+a salario asignale 1000
+a aumento asignale verdadero
+
+si aumento es verdadero, a salario agregale 500 si no muestra "Renuncia, vales mas"
+
+muestra "tu salario es:"
+muestra salario

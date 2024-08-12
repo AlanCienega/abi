@@ -1,0 +1,5 @@
+a texto asignale ""
+
+repite: a texto agregale "<> " 10 veces
+
+muestra texto

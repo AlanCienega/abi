@@ -1,4 +1,5 @@
 comentario: aqui primero guardas el texto y luego lo muestras
 
 a saludo asignale "Hola desde una variable"
+a despedida asignale "Adios desde una variable"
 muestra saludo

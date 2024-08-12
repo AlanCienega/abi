@@ -18,6 +18,8 @@ def main():
         "tests/decremento_arreglo.abi": "['equis', 'ye']\n",
         "tests/asignar-boolean.abi": "verdadero\n",
         "tests/incremento-en-ciclo.abi": "30\n",
+        "tests/si-verdadero.abi": "si\n",
+        "tests/si-falso.abi": "no\n",
     }
 
     for test_file, expected_output in tests.items():

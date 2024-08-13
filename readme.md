@@ -66,7 +66,7 @@ ejecuta: unBloqueDeCodigo
 ## ¿Quién y cómo usar el lenguaje?
 Si hablas español y estás iniciando en el mundo de la programación, muchas veces usan frases que hacen cosas que pueden ser sentencias de un lenguaje de programación, lo que vas a hacer con Abi Lenguaje de Programación es entrenar e interiorizar las sentencias. De esta forma cuando entres a aprender otro lenguaje cualquiera que este sea se haga muy facil de usar, lo más importante son los conceptos.
 
-## ¿Cómo lo uso (usuarios windows)?
+## ¿Cómo lo uso? (usuarios windows)
 Primero ve a [releases](https://github.com/AlanCienega/abi/releases) ahi vas a ver un abi.exe (descargalo), con él ya puedes ejecutar archivos.abi.
 abre una terminal en el mismo directorio donde tienes el abi.exe y pegas esto
 
@@ -385,14 +385,6 @@ fin
 
 ```
 
-## resaltado de sintaxis abi
-copia la carpeta abi-lenguaje-de-programacion--facilito- a donde estan instaladas tus extensiones
-en linux algo asi:
-```
-└─$ cp -r abi-lenguaje-de-programacion--facilito- ~/.vscode/extensions
-
-```
-luego reinicia vscode
 ## glosario
 
 - variables: Espacio de memoria para almacenar tipos de datos, enteros, logicos, arreglos etc.

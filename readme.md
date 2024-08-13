@@ -66,6 +66,20 @@ ejecuta: unBloqueDeCodigo
 ## ¿Quién y cómo usar el lenguaje?
 Si hablas español y estás iniciando en el mundo de la programación, muchas veces usan frases que hacen cosas que pueden ser sentencias de un lenguaje de programación, lo que vas a hacer con Abi Lenguaje de Programación es entrenar e interiorizar las sentencias. De esta forma cuando entres a aprender otro lenguaje cualquiera que este sea se haga muy facil de usar, lo más importante son los conceptos.
 
+## ¿Cómo lo uso (usuarios windows)?
+Primero ve a [releases](https://github.com/AlanCienega/abi/releases) ahi vas a ver un abi.exe (descargalo), con él ya puedes ejecutar archivos.abi.
+abre una terminal en el mismo directorio donde tienes el abi.exe y pegas esto
+
+```
+echo 'muestra "Hola mundo"' >> codigo.abi
+./abi codigo.abi
+```
+luego ya puedes modificarlo y ejecutar
+```
+./abi codigo.abi
+```
+
+
 ## Definición de variables
 Imagina que tienes cartones para hacer cajas. Todas las cajas tienen la misma base, pero cada una necesita una tapa especial. La tapa tiene agujeros en forma de números o letras, pero no de ambos. La tapa define el tipo de datos que podrás poner dentro de tu caja. Si la tapa tiene agujeros en forma de números, solo podrás meter números en la caja. Si tiene agujeros en forma de letras, solo podrás meter letras. Así, la tapa determina el tipo de datos que la caja puede contener.
 
